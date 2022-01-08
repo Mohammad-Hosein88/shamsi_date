@@ -287,4 +287,10 @@ class _JalaliCalculation {
     required this.gy,
     required this.march,
   });
+
+  int getDayOfYear(bool isLeap, int month, int day) {
+    const r = [0, 31, 62, 93, 124, 155, 186, 216, 246, 276, 306, 336, 365];
+    const l = [0, 31, 62, 93, 124, 155, 186, 216, 246, 276, 306, 336, 366];
+    return r[month - 1] + day;
+  }
 }
